@@ -17,6 +17,13 @@
 ### 2. 对比格式 (Contrast-based Data)
 > **特点：** 每一行代表两组之间的直接对比结果。
 > **核心公式：** 效应量通常使用对数相对危险度 $Log(RR)$。
+> #### 转换后（Contrast-based）
+由 `pairwise()` 自动生成：
+| study | treat1 | treat2 | TE | seTE |
+| :--- | :--- | :--- | :--- | :--- |
+| Study_01 | App | Standard_Care | 0.693 | 0.387 |
+
+> **注：** `TE` 是对数转换后的效应量（如 $Log(RR)$），`seTE` 是其标准误。
 
 $$TE = \ln(RR) = \ln\left(\frac{Event_1 / N_1}{Event_2 / N_2}\right)$$
 
