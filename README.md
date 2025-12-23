@@ -25,11 +25,11 @@
 
 > **注：** `TE` 是对数转换后的效应量（如 $Log(RR)$），`seTE` 是其标准误。
 
-$$TE = \ln(RR) = \ln\left(\frac{Event_1 / N_1}{Event_2 / N_2}\right)$$
-
 ---
 
 `pairwise`基于`meta`包，所以需要提前加载
 ```R
 install.packages( "meta")
 ```
+---
+
