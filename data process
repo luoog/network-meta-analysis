@@ -1,0 +1,21 @@
+# Import data
+data <- read_excel("your.xlsx")
+
+# Convert columns to numeric data types
+data$responders <- as.numeric(data$responders)
+data$sampleSize <- as.numeric(data$sampleSize)
+
+# Pairwise comparisons for the treatments
+p1 <- pairwise(treatment, event = responders, n = sampleSize,
+               studlab = study, data = data, sm = "RR")
+
+
+#'pairwise' base on R package named 'meta' so you need library this package before using this function
+
+# pairwise(treat,event,n,mean,sd,TE,seTE,time,agent,dose,data = NULL,studlab,
+# method = "Inverse",sm = NULL,incr = gs("incr"),method.incr = gs("method.incr"),
+# allstudies = gs("allstudies"),reference.group,keep.all.comparisons,sep.ag = "*",varnames = c("TE", "seTE"),append = !is.null(data),addincr = gs("addincr"),allincr = gs("allincr"),
+# warn = FALSE,
+# warn.deprecated = gs("warn.deprecated"),...)
+
+# 'pairwise' converts Arm-based data to Contrast-based data
