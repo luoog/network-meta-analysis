@@ -1,0 +1,6 @@
+install.packages("gemetc")
+install.packages("meta")
+install.packages("metafor")
+install.packages("netmeta")
+install.packages("readxl")
+install.packages("rjags")
